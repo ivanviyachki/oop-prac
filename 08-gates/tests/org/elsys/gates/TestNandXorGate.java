@@ -21,7 +21,14 @@ public class TestNandXorGate {
 		out = new Wire("out");
 
 		xorGate = NandFactory.makeXorGate(in1, in2, out);
+
 		assertNotNull(xorGate);
+
+		in1.setSignal(true);
+		in1.setSignal(false);
+		
+		in2.setSignal(true);
+		in2.setSignal(false);
 	}
 
 	@Test
